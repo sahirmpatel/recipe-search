@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+.header {
+  background-image: url(./banner.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-size: 6rem;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+}
+.shade {
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.foodcard {
+  background-color: lemonchiffon;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* foodcards stuff */
+
+.body {
+  background-color: #ffc6c7;
+  color: #333333;
+}
+.foodcard {
+  max-width: 300px;
+  margin: 10px;
+  padding: 0;
+  background-color: #faeee7;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+
+  -webkit-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 40px -11px rgba(0, 0, 0, 0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.foodcard img {
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border: 0px solid #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.foodcard h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0px 5px 5px 5px;
+}
+
+.foodcard button {
+  background-color: #ff8ba7;
+  padding: 15px 30px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  font-size: 25px;
+  font-weight: 400;
+  border: 0px solid #000000;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding: 5px;
+  color: #333333;
+  font-size: 15px;
+}
+.stubborn {
+  margin-left: 0px;
+  margin-right: -0px;
+  max-width: inherit;
+}
+.limit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+#by {
+  font-style: italic;
+}
+footer {
+  background-color: lightblue;
+  padding: 20px;
 }
