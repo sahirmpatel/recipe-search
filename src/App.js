@@ -5,9 +5,7 @@ import "./App.css";
 import { Form, Button } from "react-bootstrap";
 
 const App = () => {
-  const REACT_APP_API_KEY = "9b7aaa12383baaa6233a79cfce41529b";
-  const REACT_APP_API_ID = "98c8f2c3";
-
+  console.log("keys", process.env.REACT_APP_API_KEY);
   const [query, setQuery] = useState("Cookies");
   const [recipes, setRecipes] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -16,7 +14,7 @@ const App = () => {
     const fetchingRecipes = () => {
       axios
         .get(
-          `https://api.edamam.com/search?q=${query}&app_id=${REACT_APP_API_ID}&app_key=${REACT_APP_API_KEY}`
+          `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`
         )
         .then((response) => {
           setRecipes(response.data.hits);
@@ -91,7 +89,7 @@ const App = () => {
       <footer>
         <center>
           <small>
-            by <a href="htpps://sahirmpatel.me"> Sahir Patel </a>
+            by <a href="https://sahirmpatel.me"> Sahir Patel </a>
           </small>
         </center>
       </footer>
