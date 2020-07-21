@@ -5,7 +5,8 @@ import "./App.css";
 import { Form, Button } from "react-bootstrap";
 
 const App = () => {
-  console.log("keys", process.env.REACT_APP_API_KEY);
+  const REACT_APP_API_KEY = "9b7aaa12383baaa6233a79cfce41529b";
+  const REACT_APP_API_ID = "98c8f2c3";
   const [query, setQuery] = useState("Cookies");
   const [recipes, setRecipes] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -14,7 +15,7 @@ const App = () => {
     const fetchingRecipes = () => {
       axios
         .get(
-          `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}`
+          `https://api.edamam.com/search?q=${query}&app_id=${REACT_APP_API_ID}&app_key=${REACT_APP_API_KEY}`
         )
         .then((response) => {
           setRecipes(response.data.hits);
