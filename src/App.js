@@ -90,7 +90,7 @@ const App = () => {
       <footer>
         <center>
           <small>
-            by <a href="https://sahirmpatel.me"> Sahir Patel </a>
+            by <a href="https://sahirmpatel.me"> Sahir</a>
           </small>
         </center>
       </footer>
